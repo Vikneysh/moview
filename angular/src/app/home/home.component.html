@@ -1,0 +1,39 @@
+<app-header></app-header>
+<main class="dark:bg-gray-800 bg-white relative overflow-hidden">
+  <div class="bg-white dark:bg-orange-500 flex relative z-20 items-center">
+    <div
+      class="container mx-auto px-6 flex flex-col justify-between items-center relative py-8"
+    >
+      <div class="flex flex-col">
+        <h1
+          class="font-light w-full uppercase text-center text-4xl sm:text-5xl dark:text-white text-gray-800"
+        >
+          MOVIES, REVIEWS & MUCH MORE
+        </h1>
+        <h2
+          class="font-light max-w-2xl mx-auto w-full text-xl dark:text-white text-gray-500 text-center py-8"
+        >
+          Know everything you want to know with the ever-updated and
+          never-deprecated Moview platform!
+        </h2>
+        <div class="flex items-center justify-center mt-4">
+          <a
+            href="http://localhost:4200/toprated"
+            class="uppercase py-2 px-4 bg-gray-800 border-2 border-transparent text-white text-md mr-4 hover:bg-white hover:text-orange-600"
+          >
+            Top-Rated
+          </a>
+          <a
+            href="http://localhost:4200/reviews"
+            class="uppercase py-2 px-4 bg-gray-800 border-2 border-transparent text-white text-md mr-4 hover:bg-white hover:text-orange-600"
+          >
+            Reviews
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><router-outlet></router-outlet>
+<app-footer></app-footer>

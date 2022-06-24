@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="bg-yellow-400 m-auto my-10 mx-10 shadow-lg">
+  <div class="py-8 px-8 rounded-xl">
+    <h1 class="font-medium text-2xl mt-3 text-center">
+      Join a world of movies !
+    </h1>
+    <form action="" class="mt-6">
+      <div class="my-5 text-sm">
+        <label for="username" class="block text-black">Username</label>
+        <input
+          type="text"
+          autofocus
+          id="username"
+          class="rounded-sm px-4 py-3 mt-3 bg-gray-300 w-full"
+          placeholder="Username"
+          name="username"
+          [(ngModel)]="username"
+        />
+      </div>
+      <div class="my-5 text-sm">
+        <label for="name" class="block text-black">Name</label>
+        <input
+          type="text"
+          autofocus
+          id="name"
+          class="rounded-sm px-4 py-3 mt-3 bg-gray-300 w-full"
+          placeholder="Name"
+          name="name"
+          [(ngModel)]="name"
+        />
+      </div>
+      <div class="my-5 text-sm">
+        <label for="password" class="block text-black">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="rounded-sm px-4 py-3 mt-3 bg-gray-300 w-full"
+          placeholder="Password"
+          name="password"
+          [(ngModel)]="password"
+        />
+      </div>
+      <div class="my-5 text-sm">
+        <label for="password" class="block text-black">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm-password"
+          class="rounded-sm px-4 py-3 mt-3 bg-gray-300 w-full"
+          placeholder="Re-enter Password"
+          name="confirm-password"
+          [(ngModel)]="cnfrmpassword"
+        />
+      </div>
+      <div class="my-5 text-sm">
+        <label for="birthdate" class="block text-black">Date of Birth</label>
+        <input
+          type="date"
+          id="dob"
+          class="rounded-sm px-4 py-3 mt-3 bg-gray-300 w-full"
+          name="dob"
+          [(ngModel)]="dob"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="block text-center text-white bg-gray-800 p-3 rounded-sm hover:bg-black w-full"
+        (click)="postdetail()"
+        href="http://localhost:4200/login"
+      >
+        Register now!
+      </button>
+    </form>
+  </div>
+</div>

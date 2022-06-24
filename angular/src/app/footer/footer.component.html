@@ -1,0 +1,53 @@
+<div
+  class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-800 dark:text-gray-100"
+>
+  <div class="flex flex-col justify-between">
+    <div class="space-y-2">
+      <h2 class="text-4xl font-bold leading-tight lg:text-5xl">
+        Get in Touch!
+      </h2>
+    </div>
+  </div>
+
+  <form novalidate="" class="space-y-6 ng-untouched ng-pristine ng-valid">
+    <div>
+      <label for="name" class="text-sm">Full name</label>
+      <input
+        id="name"
+        type="text"
+        placeholder=""
+        class="w-full p-3 rounded dark:bg-yellow-200 text-black"
+        name="uname"
+        [(ngModel)]="msgObj.uname"
+      />
+    </div>
+    <div>
+      <label for="email" class="text-sm">Email</label>
+      <input
+        id="email"
+        type="email"
+        class="w-full p-3 rounded dark:bg-yellow-200 text-black"
+        name="email"
+        [(ngModel)]="msgObj.email"
+      />
+    </div>
+    <div>
+      <label for="message" class="text-sm">Message</label>
+      <textarea
+        id="message"
+        rows="3"
+        class="w-full p-3 rounded dark:bg-yellow-200 text-black"
+        name="message"
+        [(ngModel)]="msgObj.message"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-400 dark:text-gray-900"
+      (click)="postMessage()"
+    >
+      Send Message
+    </button>
+  </form>
+</div>

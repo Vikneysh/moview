@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div
+  class="mx-10 my-5 px-5 py-5 bg-green-200"
+  *ngFor="let b of blog; let i = index"
+>
+  <h1 class="text-4xl text-cyan-800">{{ blog[i].title }}</h1>
+  <br />
+  <hr style="border: 1px solid brown" />
+  <h2 class="text-sm text-cyan-500">{{ blog[i].date | date }}</h2>
+  <br /><img src="https://source.unsplash.com/random/1920x1080/?movies" /><br />
+  <p class="text-amber-800 text-justify indent-14">{{ blog[i].body }}</p>
+</div>
+<br />
+
+<button
+  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded ml-10"
+  (click)="addBlog()"
+>
+  Add a blog/review</button
+><br /><br />
+<app-footer></app-footer>

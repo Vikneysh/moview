@@ -1,0 +1,62 @@
+<app-header></app-header><br />
+<!-- <button
+  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border ml-3.5 border-blue-500 hover:border-transparent rounded"
+  (click)="viewReviews()"
+>
+  Reviews
+</button> -->
+&nbsp; &nbsp;
+<button
+  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+  (click)="viewRatings()"
+>
+  Ratings
+</button>
+&nbsp; &nbsp;
+<button
+  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+  (click)="addBlog()"
+>
+  Add Review blog
+</button>
+<br /><br />
+<div *ngIf="ratingsClicked">
+  <table class="self-center align-center">
+    <thead>
+      <th>S.No</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Rating</th>
+      <!-- <th>Your Rating</th> -->
+      <th>View</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ data[i].title }}</td>
+        <td>{{ data[i].year }}</td>
+        <td>{{ data[i].rating }}</td>
+        <td>
+          <button
+            class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+            (click)="viewMovie(i)"
+          >
+            View
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid;
+    padding: 20px;
+  }
+  th {
+    background-color: aqua;
+  }
+</style>

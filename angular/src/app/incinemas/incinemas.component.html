@@ -1,0 +1,48 @@
+<app-header></app-header><br /><br />
+<button
+  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded ml-32"
+  (click)="addBlog()"
+>
+  Add a blog/review
+</button>
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div *ngFor="let b of blog; let i = index" class="p-4 md:w-1/3">
+        <div
+          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+        >
+          <img
+            class="lg:h-48 md:h-36 w-full object-cover object-center"
+            src="{{ blog[i].img }}"
+            alt="blog"
+          />
+          <div class="p-6">
+            <h2
+              class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
+            >
+              {{ blog[i].date | date }}
+            </h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+              {{ blog[i].title }}
+            </h1>
+            <p class="leading-relaxed mb-3">
+              {{ blog[i].body.slice(0, 100) }}
+            </p>
+            <div class="flex items-center flex-wrap">
+              <button
+                class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+                (click)="viewBlog(i)"
+              >
+                Read more...
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br /><br />
+<br />
+<app-footer></app-footer>

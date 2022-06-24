@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<!-- <pre>
+  {{ data | json }}
+  </pre
+> --><br />
+<div>
+  <table class="self-center align-center">
+    <thead>
+      <th>S.No</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Rating</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ movies[i].title }}</td>
+        <td>{{ movies[i].year }}</td>
+        <td>{{ movies[i].imDbRating }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br /><br />
+<app-footer></app-footer>
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid;
+    padding: 20px;
+  }
+  th {
+    background-color: aqua;
+  }
+</style>
